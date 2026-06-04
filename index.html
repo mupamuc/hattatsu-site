@@ -21,18 +21,28 @@
   <!-- Montserrat (кириллица) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
+<body id="top">
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__tag">Повышаем эффективность производства и бизнеса — запишитесь на консультацию</p>
+      <div class="topbar__contacts">
+        <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:info@hattatsu.pro">info@hattatsu.pro</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="Hattatsu Group — на главную">
         <span class="brand__mark" aria-hidden="true">
-          <!-- стилизованная пара кои (koi) -->
           <svg viewBox="0 0 48 48" width="40" height="40">
             <circle cx="24" cy="24" r="22" fill="none" stroke="var(--primary)" stroke-width="2" opacity=".18"/>
             <path d="M24 6c7 4 7 14 0 18-7-4-7 4 0 18" fill="none" stroke="var(--primary)" stroke-width="3.2" stroke-linecap="round"/>
@@ -47,10 +57,10 @@
       <nav class="nav__menu" id="navMenu" aria-label="Главное меню">
         <a href="#top">Главная</a>
         <a href="#services">Услуги</a>
+        <a href="#about">О компании</a>
         <a href="#simulator">Симулятор</a>
-        <a href="#team">Команда</a>
         <a href="#contacts">Контакты</a>
-        <a class="btn btn--primary nav__cta" href="#contacts">Записаться на консультацию</a>
+        <a class="btn btn--primary nav__cta" href="#contacts">Записаться</a>
       </nav>
 
       <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false">
@@ -59,85 +69,145 @@
     </div>
   </header>
 
-  <main id="top">
+  <main>
 
     <!-- ===================== HERO ===================== -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__copy reveal">
-          <p class="eyebrow">HATTATSU GROUP</p>
-          <h1 class="hero__title">Глобальная экспертиза<br>для максимальной эффективности<br>вашей компании</h1>
+          <p class="eyebrow eyebrow--accent">Консалтинг · Обучение · Цифровизация</p>
+          <h1 class="hero__title">Глобальная экспертиза для максимальной эффективности вашей компании</h1>
           <p class="lead">Реализуем масштабные проекты по повышению эффективности, обеспечивая доступ к передовому опыту без бюрократических издержек.</p>
           <div class="hero__actions">
             <a class="btn btn--primary btn--lg" href="#contacts">Записаться на консультацию</a>
-            <a class="btn btn--secondary btn--lg" href="#contacts">Контактная информация</a>
+            <a class="btn btn--outline btn--lg" href="#services">Наши услуги</a>
           </div>
-          <ul class="hero__chips" aria-label="Направления">
-            <li>5C+</li><li>Lean Production</li><li>Производственные системы</li><li>Корпоративные академии</li>
+        </div>
+
+        <div class="hero__media reveal">
+          <!-- Затемнённое фото (заглушка под «самурай в цеху»). Подставить реальное фото в --photo -->
+          <div class="hero__photo photo darken" style="--photo:none">
+            <div class="hero__badge">
+              <strong>15+</strong>
+              <span>лет практики Lean</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURE ROW ===================== -->
+    <section class="features">
+      <div class="container features__grid">
+        <article class="feature reveal">
+          <span class="feature__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v6l9 4 9-4V7"/></svg>
+          </span>
+          <h3>Без бюрократии</h3>
+          <p>Прямой доступ к экспертизе и быстрые решения вместо долгих согласований.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </span>
+          <h3>Передовой опыт</h3>
+          <p>Лучшие практики Lean и производственных систем, проверенные на реальных проектах.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </span>
+          <h3>Под ключ</h3>
+          <p>От диагностики и обучения до цифровизации и сопровождения внедрения.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="feature__ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+          </span>
+          <h3>Измеримый результат</h3>
+          <p>Сокращение издержек и рост эффективности с понятными метриками.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="photo darken" style="--photo:none; --ang:150deg">
+            <div class="about__exp"><strong>15+</strong><span>лет<br>практики</span></div>
+          </div>
+        </div>
+        <div class="about__body reveal">
+          <p class="eyebrow eyebrow--accent">О компании</p>
+          <h2 class="section__title">Создаём производственные системы, которые работают</h2>
+          <p class="section__lead">Hattatsu Group переносит лучшие практики Lean напрямую в ваши процессы — быстро, конкретно и с измеримым эффектом. Подходит производственным и непроизводственным компаниям.</p>
+          <ul class="checklist">
+            <li>Производственные системы под ключ</li>
+            <li>5C+, разметка и эффективная логистика цеха</li>
+            <li>Корпоративные академии и программы обучения</li>
+            <li>Геймификация, симуляторы и цифровизация</li>
           </ul>
-        </div>
-
-        <!-- Затемнённое фото (заглушка под «самурай в цеху»). Подставить реальное фото в --hero-photo -->
-        <div class="hero__media reveal" style="--hero-photo:none">
-          <div class="hero__photo darken">
-            <span class="badge">Производство · Экспертиза</span>
-          </div>
+          <a class="btn btn--primary" href="#services">Подробнее об услугах</a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== ВОЗМОЖНОСТИ (полоса) ===================== -->
-    <section class="strip">
-      <div class="container strip__inner">
-        <span>Производственные системы</span>
-        <span>Разметка &amp; 5C+</span>
-        <span>Логистика цеха</span>
-        <span>Управление проектами</span>
-        <span>LMS &amp; цифровизация</span>
-        <span>Геймификация</span>
+    <!-- ===================== COUNTERS ===================== -->
+    <section class="counters">
+      <div class="container counters__grid">
+        <div class="counter reveal"><strong data-count="120" data-suffix="+">0</strong><span>реализованных проектов</span></div>
+        <div class="counter reveal"><strong data-count="15" data-suffix="">0</strong><span>лет практики Lean</span></div>
+        <div class="counter reveal"><strong data-count="8" data-suffix="">0</strong><span>отраслей</span></div>
+        <div class="counter reveal"><strong data-count="30" data-suffix="%">0</strong><span>средний рост эффективности</span></div>
       </div>
     </section>
 
-    <!-- ===================== УСЛУГИ ===================== -->
-    <section class="section" id="services">
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section section--soft" id="services">
       <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow eyebrow--accent">Услуги</p>
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow eyebrow--accent eyebrow--center">Услуги</p>
           <h2 class="section__title">Всё под ключ — от диагностики до результата</h2>
-          <p class="section__lead">Четыре направления, которые мы выстраиваем под задачу вашего бизнеса — производственного и непроизводственного.</p>
+          <p class="section__lead">Четыре направления, которые мы выстраиваем под задачу вашего бизнеса.</p>
         </header>
 
         <div class="cards">
           <article class="card reveal">
-            <div class="card__icon">01</div>
-            <h3>Консалтинг<span>повышение эффективности</span></h3>
-            <ul>
+            <span class="card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+            </span>
+            <h3>Консалтинг</h3>
+            <p>Повышение эффективности производства и процессов.</p>
+            <ul class="card__list">
               <li>Построение производственных систем</li>
-              <li>Производственная эффективность (в т.ч. обработка стекла)</li>
-              <li>Эффективная логистика цеха</li>
-              <li>5C+ и разметка</li>
-              <li>HR-консалтинг</li>
-              <li>Внутрикорпоративная академия</li>
+              <li>Эффективность (в т.ч. обработка стекла)</li>
+              <li>Логистика цеха, 5C+ и разметка</li>
+              <li>HR-консалтинг, внутрикорпоративная академия</li>
             </ul>
           </article>
 
           <article class="card reveal">
-            <div class="card__icon">02</div>
-            <h3>Обучение<span>программы и симуляторы</span></h3>
-            <ul>
+            <span class="card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 7v6M7 9.5V14c0 1.5 2.5 3 5 3s5-1.5 5-3V9.5"/></svg>
+            </span>
+            <h3>Обучение</h3>
+            <p>Программы и симуляторы под бизнес-задачу.</p>
+            <ul class="card__list">
               <li>Основы Lean Production</li>
-              <li>Управление проектами</li>
+              <li>Управление проектами, руководство</li>
               <li>Коммуникация и мотивация в Lean</li>
-              <li>Практические основы и стили руководства</li>
-              <li>Обучение под бизнес-задачу</li>
               <li>Геймификация и симуляторы</li>
             </ul>
           </article>
 
           <article class="card reveal">
-            <div class="card__icon">03</div>
-            <h3>Цифровизация<span>системы и платформы</span></h3>
-            <ul>
+            <span class="card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+            </span>
+            <h3>Цифровизация</h3>
+            <p>Платформы и системы под процессы.</p>
+            <ul class="card__list">
               <li>Корпоративный портал</li>
               <li>LMS-система обучения</li>
               <li>Web-разработка</li>
@@ -146,9 +216,12 @@
           </article>
 
           <article class="card reveal">
-            <div class="card__icon">04</div>
-            <h3>Маркетинг<span>упаковка и рост</span></h3>
-            <ul>
+            <span class="card__ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M3 11H2v2h1M8 14v4l3 1"/></svg>
+            </span>
+            <h3>Маркетинг</h3>
+            <p>Упаковка бренда и инструменты роста.</p>
+            <ul class="card__list">
               <li>Упаковка бренда</li>
               <li>Сайты и ивенты</li>
               <li>Системы коммуникации</li>
@@ -159,26 +232,26 @@
       </div>
     </section>
 
-    <!-- ===================== О КОМПАНИИ ===================== -->
-    <section class="section section--soft" id="about">
-      <div class="container about__grid">
-        <div class="reveal">
-          <p class="eyebrow eyebrow--accent">О компании</p>
-          <h2 class="section__title">Передовой опыт без бюрократических издержек</h2>
-          <p class="section__lead">Hattatsu Group выстраивает производственные и управленческие системы, которые работают на результат. Мы переносим лучшие практики Lean напрямую в ваши процессы — быстро, конкретно и с измеримым эффектом.</p>
+    <!-- ===================== INDUSTRIES ===================== -->
+    <section class="section" id="industries">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow eyebrow--accent eyebrow--center">Отрасли</p>
+          <h2 class="section__title">С кем мы работаем</h2>
+        </header>
+        <div class="industries">
+          <a class="industry photo darken reveal" style="--ang:160deg" href="#contacts"><span>Обработка стекла</span></a>
+          <a class="industry photo darken reveal" style="--ang:200deg" href="#contacts"><span>Металлообработка</span></a>
+          <a class="industry photo darken reveal" style="--ang:140deg" href="#contacts"><span>Логистика и склад</span></a>
+          <a class="industry photo darken reveal" style="--ang:220deg" href="#contacts"><span>Пищевое производство</span></a>
         </div>
-        <ul class="about__points reveal">
-          <li><strong>Цель</strong><span>Максимальная эффективность бизнеса наших клиентов.</span></li>
-          <li><strong>Миссия</strong><span>Открытый доступ к передовому опыту для компаний любого профиля.</span></li>
-          <li><strong>География</strong><span>Проекты по всей России — на площадке клиента и онлайн.</span></li>
-        </ul>
       </div>
     </section>
 
-    <!-- ===================== СИМУЛЯТОР / ИГРА (тёмный блок) ===================== -->
+    <!-- ===================== SIMULATOR / ИГРА ===================== -->
     <section class="section sim" id="simulator">
       <div class="container">
-        <header class="section__head reveal">
+        <header class="section__head section__head--center reveal">
           <span class="badge badge--gold">Открытый доступ</span>
           <h2 class="section__title section__title--light">Бизнес-симулятор «Игромания»</h2>
           <p class="section__lead section__lead--light">Геймификация Lean — обучайте команду на практике. Откройте симулятор прямо в браузере, без регистрации.</p>
@@ -190,7 +263,6 @@
             <span class="sim__url">mupamuc.github.io/dpo-play</span>
             <a class="sim__open" href="https://mupamuc.github.io/dpo-play/" target="_blank" rel="noopener">Открыть в новом окне ↗</a>
           </div>
-          <!-- iframe грузится по клику/прокрутке, чтобы не блокировать загрузку страницы -->
           <div class="sim__embed" id="simEmbed" data-src="https://mupamuc.github.io/dpo-play/">
             <button class="sim__play" id="simPlay" type="button" aria-label="Запустить симулятор">
               <span class="sim__playicon">▶</span>
@@ -203,46 +275,54 @@
       </div>
     </section>
 
-    <!-- ===================== КОМАНДА ===================== -->
-    <section class="section" id="team">
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section section--soft" id="reviews">
       <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow eyebrow--accent">Команда экспертов</p>
-          <h2 class="section__title">Практики, а не теоретики</h2>
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow eyebrow--accent eyebrow--center">Отзывы</p>
+          <h2 class="section__title">Что говорят клиенты</h2>
         </header>
-        <div class="team">
-          <article class="member reveal"><div class="member__ava">HG</div><h3>Руководитель практики Lean</h3><p>Производственные системы, 5C+, логистика цеха.</p></article>
-          <article class="member reveal"><div class="member__ava">HG</div><h3>Эксперт по обучению</h3><p>Корпоративные академии, программы, геймификация.</p></article>
-          <article class="member reveal"><div class="member__ava">HG</div><h3>Лид цифровизации</h3><p>LMS, порталы, дашборды, web-разработка.</p></article>
-          <article class="member reveal"><div class="member__ava">HG</div><h3>Маркетинг и упаковка</h3><p>Бренд, сайты, ивенты, системы коммуникации.</p></article>
+        <div class="reviews">
+          <figure class="review reveal">
+            <div class="review__stars">★★★★★</div>
+            <blockquote>Сократили потери на участке и навели порядок по 5S за два месяца. Команда Hattatsu говорит на языке цеха, а не теории.</blockquote>
+            <figcaption><span class="review__ava">ДМ</span><span><strong>Директор по производству</strong><small>Стекольный завод</small></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="review__stars">★★★★★</div>
+            <blockquote>Запустили внутреннюю академию и симуляторы Lean. Обучение перестало быть формальностью — люди реально применяют.</blockquote>
+            <figcaption><span class="review__ava">АК</span><span><strong>HR-директор</strong><small>Машиностроение</small></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <div class="review__stars">★★★★★</div>
+            <blockquote>Прозрачные метрики и быстрый результат без бюрократии. Логистику склада перестроили с измеримым эффектом.</blockquote>
+            <figcaption><span class="review__ava">СП</span><span><strong>Операционный директор</strong><small>Логистика</small></span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ===================== CTA-полоса ===================== -->
-    <section class="ctaband">
-      <div class="container ctaband__inner reveal">
-        <h2>Все под ключ — закажите встречу с&nbsp;руководителем Hattatsu</h2>
-        <a class="btn btn--light btn--lg" href="#contacts">Заказать встречу</a>
-      </div>
-    </section>
-
-    <!-- ===================== ДОКУМЕНТЫ (внизу, по правкам) ===================== -->
-    <section class="section section--soft" id="docs">
+    <!-- ===================== CLIENTS / PARTNERS ===================== -->
+    <section class="clients">
       <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow eyebrow--accent">Документы</p>
-          <h2 class="section__title">Юридическая информация и материалы</h2>
-        </header>
-        <div class="docs">
-          <a class="doc reveal" href="#contacts"><span class="doc__ico">PDF</span><div><strong>Коммерческое предложение</strong><span>Презентация направлений и кейсов</span></div></a>
-          <a class="doc reveal" href="#contacts"><span class="doc__ico">DOC</span><div><strong>Реквизиты и договор</strong><span>Юридическая информация — по запросу</span></div></a>
-          <a class="doc reveal" href="#contacts"><span class="doc__ico">PDF</span><div><strong>Программы обучения</strong><span>Каталог курсов и симуляторов</span></div></a>
+        <p class="clients__label">Нам доверяют производственные и сервисные компании</p>
+        <div class="clients__row">
+          <span>ПРОИЗВОДСТВО</span><span>ЛОГИСТИКА</span><span>МАШИНОСТРОЕНИЕ</span><span>СТЕКЛО</span><span>ПИЩЕПРОМ</span>
         </div>
       </div>
     </section>
 
-    <!-- ===================== КОНТАКТЫ ===================== -->
+    <!-- ===================== CTA BAND ===================== -->
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <p class="eyebrow eyebrow--light">Готовы начать?</p>
+        <h2>Повысим эффективность вашей компании — под ключ</h2>
+        <p class="cta__lead">Закажите встречу с руководителем Hattatsu и получите план повышения эффективности.</p>
+        <a class="btn btn--light btn--lg" href="#contacts">Записаться на консультацию</a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTS ===================== -->
     <section class="section" id="contacts">
       <div class="container contacts__grid">
         <div class="reveal">
@@ -271,17 +351,35 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="container footer__inner">
+    <div class="container footer__grid">
       <div class="footer__brand">
         <span class="brand__name brand__name--light">HATTATSU<span class="brand__sub">GROUP</span></span>
-        <p>Глобальная экспертиза для максимальной эффективности вашей компании.</p>
+        <p>Глобальная экспертиза для максимальной эффективности вашей компании. Консалтинг, обучение, цифровизация.</p>
+        <div class="footer__social">
+          <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="MAX">MAX</a>
+          <a href="mailto:info@hattatsu.pro" aria-label="E-mail">@</a>
+        </div>
       </div>
-      <nav class="footer__nav" aria-label="Подвал">
-        <a href="#services">Услуги</a>
-        <a href="#simulator">Симулятор</a>
-        <a href="#team">Команда</a>
-        <a href="#docs">Документы</a>
+      <nav class="footer__col" aria-label="Компания">
+        <h4>Компания</h4>
+        <a href="#about">О компании</a>
+        <a href="#industries">Отрасли</a>
+        <a href="#reviews">Отзывы</a>
         <a href="#contacts">Контакты</a>
+      </nav>
+      <nav class="footer__col" aria-label="Услуги">
+        <h4>Услуги</h4>
+        <a href="#services">Консалтинг</a>
+        <a href="#services">Обучение</a>
+        <a href="#services">Цифровизация</a>
+        <a href="#services">Маркетинг</a>
+      </nav>
+      <nav class="footer__col" aria-label="Ресурсы">
+        <h4>Ресурсы</h4>
+        <a href="#simulator">Бизнес-симулятор</a>
+        <a href="#contacts">Документы по запросу</a>
+        <a href="#contacts">Записаться на встречу</a>
       </nav>
     </div>
     <div class="container footer__legal">© <span id="year"></span> Hattatsu Group. Все права защищены.</div>
