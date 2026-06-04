@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lean-симулятор под вашу задачу — HATTATSU GROUP</title>
+  <meta name="description" content="Соберите Lean-симулятор под свою отрасль и узкое место за минуту. Интерактивная демо-игра Hattatsu Group: проживите потери производства и получите план улучшений." />
+  <meta name="theme-color" content="#0b0e22" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231E2470'/%3E%3Cpath d='M24 9c6 4 6 12 0 15-6-3-6 5 0 15' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lean-симулятор под вашу задачу — HATTATSU GROUP" />
+  <meta property="og:description" content="Соберите симулятор под свою отрасль за минуту и проживите потери производства. Демо Hattatsu Group." />
+  <meta property="og:url" content="https://mupamuc.github.io/hattatsu-site/simulator.html" />
+  <meta property="og:image" content="https://mupamuc.github.io/hattatsu-site/assets/img/og.png" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mupamuc.github.io/hattatsu-site/simulator.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body id="top">
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Hattatsu Group — на главную">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="var(--primary)" stroke-width="2" opacity=".18"/>
+            <path d="M24 6c7 4 7 14 0 18-7-4-7 4 0 18" fill="none" stroke="var(--primary)" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="M24 42c-7-4-7-14 0-18 7 4 7-4 0-18" fill="none" stroke="var(--steel)" stroke-width="3.2" stroke-linecap="round"/>
+            <circle cx="24" cy="15" r="2.1" fill="var(--primary)"/>
+            <circle cx="24" cy="33" r="2.1" fill="var(--steel)"/>
+          </svg>
+        </span>
+        <span class="brand__name">HATTATSU<span class="brand__sub">GROUP</span></span>
+      </a>
+      <nav class="nav__menu" aria-label="Меню">
+        <a href="index.html">← На главную</a>
+        <a href="index.html#services">Услуги</a>
+        <a class="btn btn--primary nav__cta" href="index.html#contacts">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="sg-main">
+    <header class="sg-head">
+      <p class="eyebrow eyebrow--accent">Lean-симулятор</p>
+      <h1 class="sg-h1">Соберите симулятор под свою задачу</h1>
+      <p class="sg-sub">Выберите отрасль и узкое место — или опишите словами. За минуту соберём сценарий и вы «проживёте» потери своего производства, принимая решения.</p>
+    </header>
+
+    <!-- STEP: BUILDER -->
+    <section class="sg-step is-active" id="sg-builder">
+      <div class="sg-card">
+        <div class="sg-field">
+          <label for="sg-industry">Отрасль</label>
+          <select id="sg-industry">
+            <option value="glass">Обработка стекла</option>
+            <option value="metal">Металлообработка</option>
+            <option value="food">Пищевое производство</option>
+            <option value="logi">Логистика и склад</option>
+            <option value="mach">Машиностроение</option>
+            <option value="other" selected>Другое производство</option>
+          </select>
+        </div>
+        <div class="sg-field">
+          <label for="sg-bottleneck">Главное узкое место</label>
+          <select id="sg-bottleneck">
+            <option value="setup">Переналадки и простои</option>
+            <option value="quality">Брак и качество</option>
+            <option value="invent">Логистика и запасы</option>
+            <option value="people">Мотивация и текучка</option>
+            <option value="plan">Планирование и сроки</option>
+          </select>
+        </div>
+        <div class="sg-field">
+          <label for="sg-company">Компания <span class="sg-opt">(необязательно)</span></label>
+          <input type="text" id="sg-company" placeholder="Например: Завод «Стеклоград»" autocomplete="organization" />
+        </div>
+        <div class="sg-field">
+          <label for="sg-note">Опишите ситуацию словами <span class="sg-opt">(необязательно — можно голосом)</span></label>
+          <div class="sg-voice">
+            <textarea id="sg-note" rows="2" placeholder="Напр.: на упаковке частые простои из-за переналадок, растёт брак…"></textarea>
+            <button class="sg-mic" id="sg-mic" type="button" aria-label="Голосовой ввод" title="Сказать голосом">🎤</button>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--lg" id="sg-build">Собрать симулятор →</button>
+        <p class="sg-note">Демо: сценарий собирается из готовых Lean-модулей под вашу отрасль. Полная версия — ИИ строит игру по вашему рассказу (голосом или текстом) и метрики берёт из ваших данных.</p>
+      </div>
+    </section>
+
+    <!-- STEP: LOADING -->
+    <section class="sg-step" id="sg-loading">
+      <div class="sg-loader">
+        <div class="sg-spin" aria-hidden="true"></div>
+        <p id="sg-loadtext">Собираем сценарий под вас…</p>
+      </div>
+    </section>
+
+    <!-- STEP: GAME -->
+    <section class="sg-step" id="sg-game">
+      <div class="sg-game">
+        <div class="sg-game-head">
+          <div>
+            <h2 id="sg-gtitle">Lean-симулятор</h2>
+            <p id="sg-gsub"></p>
+          </div>
+          <span class="sg-round" id="sg-round">Раунд 1 / 6</span>
+        </div>
+        <div class="sg-meters" id="sg-meters"></div>
+        <div class="sg-event" id="sg-event"></div>
+        <div class="sg-choices" id="sg-choices"></div>
+        <p class="sg-reply" id="sg-reply"></p>
+        <button class="btn btn--primary" id="sg-next" style="display:none">Далее →</button>
+      </div>
+    </section>
+
+    <!-- STEP: RESULT -->
+    <section class="sg-step" id="sg-result">
+      <div class="sg-card sg-resultcard">
+        <p class="eyebrow eyebrow--accent eyebrow--center">Результат</p>
+        <div class="sg-score" id="sg-score">0</div>
+        <p class="sg-scorelabel">эффективность из 100</p>
+        <h2 class="sg-verdict" id="sg-verdict"></h2>
+        <p class="sg-rtext" id="sg-rtext"></p>
+        <p class="sg-rfocus" id="sg-rfocus"></p>
+        <div class="sg-cta">
+          <p>Хотите полный симулятор под <b>ваш</b> процесс — ИИ соберёт по вашему рассказу — и план улучшений от Hattatsu?</p>
+          <a class="btn btn--primary btn--lg" id="sg-lead" href="#">Получить полную версию + план</a>
+          <button class="btn btn--outline" id="sg-again" type="button">Изменить сценарий</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__legal">© <span id="year"></span> Hattatsu Group · <a href="index.html" style="color:var(--accent)">На главную</a></div>
+  </footer>
+
+  <script src="assets/js/sim-game.js"></script>
+</body>
+</html>

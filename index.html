@@ -277,11 +277,13 @@
     <section class="section sim" id="simulator">
       <div class="container">
         <header class="section__head section__head--center reveal">
-          <span class="badge badge--gold">Открытый доступ</span>
-          <h2 class="section__title section__title--light">Бизнес-симулятор «Игромания»</h2>
-          <p class="section__lead section__lead--light">Геймификация Lean — обучайте команду на практике. Откройте симулятор прямо в браузере, без регистрации.</p>
+          <span class="badge badge--gold">Новое · собери под себя</span>
+          <h2 class="section__title section__title--light">Соберите Lean-симулятор под свою задачу</h2>
+          <p class="section__lead section__lead--light">Опишите своё производство — голосом или текстом — и проживите его потери в игре, принимая решения. Понравится — соберём полную версию под вашу команду.</p>
+          <a class="btn btn--primary btn--lg sim__cta" href="simulator.html">Собрать симулятор под свою задачу →</a>
         </header>
 
+        <p class="sim__examplelabel reveal">Пример готовой игры — «Центр ДПО: выживи до отчёта»:</p>
         <div class="sim__frame reveal">
           <div class="sim__bar">
             <span class="sim__dot"></span><span class="sim__dot"></span><span class="sim__dot"></span>
@@ -443,6 +445,75 @@
     </div>
     <div class="container footer__legal">© <span id="year"></span> Hattatsu Group. Все права защищены.</div>
   </footer>
+
+  <!-- ===================== STRUCTURED DATA (JSON-LD) ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mupamuc.github.io/hattatsu-site/#org",
+        "name": "HATTATSU GROUP",
+        "url": "https://mupamuc.github.io/hattatsu-site/",
+        "email": "info@hattatsu.pro",
+        "logo": "https://mupamuc.github.io/hattatsu-site/assets/img/og.png",
+        "image": "https://mupamuc.github.io/hattatsu-site/assets/img/og.png",
+        "slogan": "Глобальная экспертиза для максимальной эффективности вашей компании",
+        "description": "Консалтинг и обучение по повышению эффективности производства и бизнеса: Lean Production, производственные системы, цифровизация, корпоративные академии и бизнес-симуляторы.",
+        "knowsAbout": ["Lean Production", "Бережливое производство", "Производственные системы", "5S", "Логистика цеха", "Цифровизация производства", "Корпоративное обучение", "Геймификация обучения"],
+        "areaServed": { "@type": "Country", "name": "Россия" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://mupamuc.github.io/hattatsu-site/#service",
+        "name": "HATTATSU GROUP — Lean-консалтинг и обучение",
+        "url": "https://mupamuc.github.io/hattatsu-site/",
+        "image": "https://mupamuc.github.io/hattatsu-site/assets/img/og.png",
+        "provider": { "@id": "https://mupamuc.github.io/hattatsu-site/#org" },
+        "areaServed": { "@type": "Country", "name": "Россия" },
+        "serviceType": ["Lean-консалтинг", "Корпоративное обучение", "Цифровизация", "Маркетинг"],
+        "description": "Повышение эффективности производства и бизнеса под ключ: диагностика, обучение, построение производственных систем, цифровизация и сопровождение внедрения.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги Hattatsu Group",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Консалтинг", "description": "Построение производственных систем, эффективность, логистика цеха, 5C+, HR-консалтинг и внутрикорпоративная академия." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Обучение", "description": "Основы Lean Production, управление проектами, коммуникация и мотивация в Lean, геймификация и симуляторы." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Цифровизация", "description": "Корпоративный портал, LMS-система обучения, web-разработка, дашборды и аналитика." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Маркетинг", "description": "Упаковка бренда, сайты и ивенты, системы коммуникации." } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mupamuc.github.io/hattatsu-site/#website",
+        "url": "https://mupamuc.github.io/hattatsu-site/",
+        "name": "HATTATSU GROUP",
+        "inLanguage": "ru-RU",
+        "publisher": { "@id": "https://mupamuc.github.io/hattatsu-site/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mupamuc.github.io/hattatsu-site/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "Что такое Lean Production и зачем он нужен бизнесу?", "acceptedAnswer": { "@type": "Answer", "text": "Lean Production (бережливое производство) — система управления, которая повышает эффективность за счёт устранения потерь: лишних запасов, ожиданий, перемещений и брака. Бизнес получает рост производительности, снижение издержек и более стабильное качество." } },
+          { "@type": "Question", "name": "Сколько длится проект по повышению эффективности?", "acceptedAnswer": { "@type": "Answer", "text": "Пилотный проект обычно занимает от 2 до 6 месяцев в зависимости от масштаба участка и целей. Первые измеримые результаты по 5S и логистике цеха появляются уже в первые недели." } },
+          { "@type": "Question", "name": "С какими отраслями работает Hattatsu Group?", "acceptedAnswer": { "@type": "Answer", "text": "Мы работаем с обработкой стекла, металлообработкой, машиностроением, логистикой и складом, пищевым производством. Подход применим и к непроизводственным компаниям." } },
+          { "@type": "Question", "name": "Что входит в услугу «под ключ»?", "acceptedAnswer": { "@type": "Answer", "text": "Полный цикл: диагностика процессов, обучение команды, построение производственной системы, цифровизация (LMS, дашборды, корпоративные порталы) и сопровождение внедрения до достижения измеримого результата." } },
+          { "@type": "Question", "name": "Что такое бизнес-симулятор и как он помогает в обучении?", "acceptedAnswer": { "@type": "Answer", "text": "Это игровой тренажёр Lean с открытым доступом в браузере. Команда отрабатывает принципы бережливого производства на практике, без риска для реальных процессов. На базе движка строим корпоративные симуляторы под задачу клиента." } }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://mupamuc.github.io/hattatsu-site/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://mupamuc.github.io/hattatsu-site/" }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <script src="assets/js/main.js"></script>
 </body>

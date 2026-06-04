@@ -1,0 +1,36 @@
+# robots.txt — HATTATSU GROUP
+#
+# ВНИМАНИЕ: это project-page на github.io. По пути /hattatsu-site/robots.txt
+# поисковые и AI-краулеры этот файл ИГНОРИРУЮТ — читается только корневой
+# https://mupamuc.github.io/robots.txt. Файл вступит в силу после подключения
+# собственного домена (например, hattatsu.pro) или переноса на root-репозиторий.
+
+User-agent: *
+Allow: /
+
+# AI-краулеры — явно разрешаем индексацию для AI-поиска
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mupamuc.github.io/hattatsu-site/sitemap.xml
