@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HATTATSU GROUP — Глобальная экспертиза для эффективности вашей компании</title>
+  <meta name="description" content="Hattatsu Group — консалтинг и обучение по повышению эффективности производства и бизнеса. Lean Production, производственные системы, цифровизация, корпоративные академии и симуляторы." />
+  <meta name="theme-color" content="#1E2470" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231E2470'/%3E%3Cpath d='M24 9c6 4 6 12 0 15-6-3-6 5 0 15' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph / превью ссылки -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HATTATSU GROUP — экспертиза для эффективности вашей компании" />
+  <meta property="og:description" content="Консалтинг и обучение: Lean, производственные системы, цифровизация, бизнес-симуляторы. Реализуем масштабные проекты по повышению эффективности." />
+  <meta property="og:url" content="https://mupamuc.github.io/hattatsu-site/" />
+  <meta property="og:image" content="https://mupamuc.github.io/hattatsu-site/assets/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Montserrat (кириллица) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Hattatsu Group — на главную">
+        <span class="brand__mark" aria-hidden="true">
+          <!-- стилизованная пара кои (koi) -->
+          <svg viewBox="0 0 48 48" width="40" height="40">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="var(--primary)" stroke-width="2" opacity=".18"/>
+            <path d="M24 6c7 4 7 14 0 18-7-4-7 4 0 18" fill="none" stroke="var(--primary)" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="M24 42c-7-4-7-14 0-18 7 4 7-4 0-18" fill="none" stroke="var(--steel)" stroke-width="3.2" stroke-linecap="round"/>
+            <circle cx="24" cy="15" r="2.1" fill="var(--primary)"/>
+            <circle cx="24" cy="33" r="2.1" fill="var(--steel)"/>
+          </svg>
+        </span>
+        <span class="brand__name">HATTATSU<span class="brand__sub">GROUP</span></span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Главное меню">
+        <a href="#top">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#simulator">Симулятор</a>
+        <a href="#team">Команда</a>
+        <a href="#contacts">Контакты</a>
+        <a class="btn btn--primary nav__cta" href="#contacts">Записаться на консультацию</a>
+      </nav>
+
+      <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">HATTATSU GROUP</p>
+          <h1 class="hero__title">Глобальная экспертиза<br>для максимальной эффективности<br>вашей компании</h1>
+          <p class="lead">Реализуем масштабные проекты по повышению эффективности, обеспечивая доступ к передовому опыту без бюрократических издержек.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#contacts">Записаться на консультацию</a>
+            <a class="btn btn--secondary btn--lg" href="#contacts">Контактная информация</a>
+          </div>
+          <ul class="hero__chips" aria-label="Направления">
+            <li>5C+</li><li>Lean Production</li><li>Производственные системы</li><li>Корпоративные академии</li>
+          </ul>
+        </div>
+
+        <!-- Затемнённое фото (заглушка под «самурай в цеху»). Подставить реальное фото в --hero-photo -->
+        <div class="hero__media reveal" style="--hero-photo:none">
+          <div class="hero__photo darken">
+            <span class="badge">Производство · Экспертиза</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ВОЗМОЖНОСТИ (полоса) ===================== -->
+    <section class="strip">
+      <div class="container strip__inner">
+        <span>Производственные системы</span>
+        <span>Разметка &amp; 5C+</span>
+        <span>Логистика цеха</span>
+        <span>Управление проектами</span>
+        <span>LMS &amp; цифровизация</span>
+        <span>Геймификация</span>
+      </div>
+    </section>
+
+    <!-- ===================== УСЛУГИ ===================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--accent">Услуги</p>
+          <h2 class="section__title">Всё под ключ — от диагностики до результата</h2>
+          <p class="section__lead">Четыре направления, которые мы выстраиваем под задачу вашего бизнеса — производственного и непроизводственного.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon">01</div>
+            <h3>Консалтинг<span>повышение эффективности</span></h3>
+            <ul>
+              <li>Построение производственных систем</li>
+              <li>Производственная эффективность (в т.ч. обработка стекла)</li>
+              <li>Эффективная логистика цеха</li>
+              <li>5C+ и разметка</li>
+              <li>HR-консалтинг</li>
+              <li>Внутрикорпоративная академия</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">02</div>
+            <h3>Обучение<span>программы и симуляторы</span></h3>
+            <ul>
+              <li>Основы Lean Production</li>
+              <li>Управление проектами</li>
+              <li>Коммуникация и мотивация в Lean</li>
+              <li>Практические основы и стили руководства</li>
+              <li>Обучение под бизнес-задачу</li>
+              <li>Геймификация и симуляторы</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">03</div>
+            <h3>Цифровизация<span>системы и платформы</span></h3>
+            <ul>
+              <li>Корпоративный портал</li>
+              <li>LMS-система обучения</li>
+              <li>Web-разработка</li>
+              <li>Дашборды и аналитика</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">04</div>
+            <h3>Маркетинг<span>упаковка и рост</span></h3>
+            <ul>
+              <li>Упаковка бренда</li>
+              <li>Сайты и ивенты</li>
+              <li>Системы коммуникации</li>
+              <li>Система управления под задачу</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== О КОМПАНИИ ===================== -->
+    <section class="section section--soft" id="about">
+      <div class="container about__grid">
+        <div class="reveal">
+          <p class="eyebrow eyebrow--accent">О компании</p>
+          <h2 class="section__title">Передовой опыт без бюрократических издержек</h2>
+          <p class="section__lead">Hattatsu Group выстраивает производственные и управленческие системы, которые работают на результат. Мы переносим лучшие практики Lean напрямую в ваши процессы — быстро, конкретно и с измеримым эффектом.</p>
+        </div>
+        <ul class="about__points reveal">
+          <li><strong>Цель</strong><span>Максимальная эффективность бизнеса наших клиентов.</span></li>
+          <li><strong>Миссия</strong><span>Открытый доступ к передовому опыту для компаний любого профиля.</span></li>
+          <li><strong>География</strong><span>Проекты по всей России — на площадке клиента и онлайн.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== СИМУЛЯТОР / ИГРА (тёмный блок) ===================== -->
+    <section class="section sim" id="simulator">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="badge badge--gold">Открытый доступ</span>
+          <h2 class="section__title section__title--light">Бизнес-симулятор «Игромания»</h2>
+          <p class="section__lead section__lead--light">Геймификация Lean — обучайте команду на практике. Откройте симулятор прямо в браузере, без регистрации.</p>
+        </header>
+
+        <div class="sim__frame reveal">
+          <div class="sim__bar">
+            <span class="sim__dot"></span><span class="sim__dot"></span><span class="sim__dot"></span>
+            <span class="sim__url">mupamuc.github.io/dpo-play</span>
+            <a class="sim__open" href="https://mupamuc.github.io/dpo-play/" target="_blank" rel="noopener">Открыть в новом окне ↗</a>
+          </div>
+          <!-- iframe грузится по клику/прокрутке, чтобы не блокировать загрузку страницы -->
+          <div class="sim__embed" id="simEmbed" data-src="https://mupamuc.github.io/dpo-play/">
+            <button class="sim__play" id="simPlay" type="button" aria-label="Запустить симулятор">
+              <span class="sim__playicon">▶</span>
+              <span>Запустить симулятор</span>
+              <small>Открытый доступ · без регистрации</small>
+            </button>
+          </div>
+        </div>
+        <p class="sim__note reveal">Симулятор встроен как демо. На базе этого движка строим корпоративные симуляторы под вашу бизнес-задачу.</p>
+      </div>
+    </section>
+
+    <!-- ===================== КОМАНДА ===================== -->
+    <section class="section" id="team">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--accent">Команда экспертов</p>
+          <h2 class="section__title">Практики, а не теоретики</h2>
+        </header>
+        <div class="team">
+          <article class="member reveal"><div class="member__ava">HG</div><h3>Руководитель практики Lean</h3><p>Производственные системы, 5C+, логистика цеха.</p></article>
+          <article class="member reveal"><div class="member__ava">HG</div><h3>Эксперт по обучению</h3><p>Корпоративные академии, программы, геймификация.</p></article>
+          <article class="member reveal"><div class="member__ava">HG</div><h3>Лид цифровизации</h3><p>LMS, порталы, дашборды, web-разработка.</p></article>
+          <article class="member reveal"><div class="member__ava">HG</div><h3>Маркетинг и упаковка</h3><p>Бренд, сайты, ивенты, системы коммуникации.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA-полоса ===================== -->
+    <section class="ctaband">
+      <div class="container ctaband__inner reveal">
+        <h2>Все под ключ — закажите встречу с&nbsp;руководителем Hattatsu</h2>
+        <a class="btn btn--light btn--lg" href="#contacts">Заказать встречу</a>
+      </div>
+    </section>
+
+    <!-- ===================== ДОКУМЕНТЫ (внизу, по правкам) ===================== -->
+    <section class="section section--soft" id="docs">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--accent">Документы</p>
+          <h2 class="section__title">Юридическая информация и материалы</h2>
+        </header>
+        <div class="docs">
+          <a class="doc reveal" href="#contacts"><span class="doc__ico">PDF</span><div><strong>Коммерческое предложение</strong><span>Презентация направлений и кейсов</span></div></a>
+          <a class="doc reveal" href="#contacts"><span class="doc__ico">DOC</span><div><strong>Реквизиты и договор</strong><span>Юридическая информация — по запросу</span></div></a>
+          <a class="doc reveal" href="#contacts"><span class="doc__ico">PDF</span><div><strong>Программы обучения</strong><span>Каталог курсов и симуляторов</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== КОНТАКТЫ ===================== -->
+    <section class="section" id="contacts">
+      <div class="container contacts__grid">
+        <div class="reveal">
+          <p class="eyebrow eyebrow--accent">Контакты</p>
+          <h2 class="section__title">Запросить полную информацию</h2>
+          <p class="section__lead">Оставьте заявку — пришлём презентацию и предложим время для встречи. Личные данные обрабатываем только по запросу.</p>
+          <ul class="contacts__links">
+            <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram →</a></li>
+            <li><a href="#" rel="noopener">MAX →</a></li>
+            <li><a href="mailto:info@hattatsu.pro">info@hattatsu.pro →</a></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="leadForm" novalidate>
+          <label>Имя<input type="text" name="name" autocomplete="name" required></label>
+          <label>Компания<input type="text" name="company" autocomplete="organization"></label>
+          <label>Телефон<input type="tel" name="phone" autocomplete="tel" required></label>
+          <label>Сообщение<textarea name="message" rows="3"></textarea></label>
+          <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку данных.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name brand__name--light">HATTATSU<span class="brand__sub">GROUP</span></span>
+        <p>Глобальная экспертиза для максимальной эффективности вашей компании.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Подвал">
+        <a href="#services">Услуги</a>
+        <a href="#simulator">Симулятор</a>
+        <a href="#team">Команда</a>
+        <a href="#docs">Документы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">© <span id="year"></span> Hattatsu Group. Все права защищены.</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
