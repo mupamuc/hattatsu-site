@@ -1,6 +1,6 @@
 /* ============================================================
    HATTATSU GROUP — WeldWorks-style structure
-   Accent: WeldWorks steel-blue (#4263A1, verified). Dark surfaces: navy brand.
+   Accent: WeldWorks steel-blue (#4263A1). Dark surfaces: WeldWorks charcoal #1D1E22. Koi logo stays navy.
    Brand mark stays navy. Montserrat. Darkened industrial photos.
    ============================================================ */
 
@@ -24,8 +24,8 @@
   --surface-strong: #ecedf6;
   --hairline: #e3e5f0;
 
-  --surface-dark: #0b0e22;
-  --surface-dark-elev: #161a38;
+  --surface-dark: #1d1e22;
+  --surface-dark-elev: #25272a;
   --on-dark: #ffffff;
   --on-dark-soft: #a9adc6;
 
@@ -160,10 +160,10 @@ h1, h2, h3, h4 { color: var(--ink); margin: 0; font-weight: 800; letter-spacing:
    FEATURE ROW (navy band, orange icons)
    ============================================================ */
 .features { margin-top: -40px; position: relative; z-index: 2; }
-.features__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--primary); border-radius: var(--r-card); overflow: hidden; box-shadow: var(--shadow-lift); }
+.features__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--surface-dark); border-radius: var(--r-card); overflow: hidden; box-shadow: var(--shadow-lift); }
 .feature { padding: 34px 30px; color: #fff; border-right: 1px solid rgba(255,255,255,.1); transition: background .2s; }
 .feature:last-child { border-right: 0; }
-.feature:hover { background: var(--primary-active); }
+.feature:hover { background: var(--surface-dark-elev); }
 .feature__ic { color: var(--accent); display: block; margin-bottom: 16px; }
 .feature h3 { color: #fff; font-size: 19px; font-weight: 700; margin-bottom: 10px; }
 .feature p { color: rgba(255,255,255,.78); font-size: 14px; line-height: 1.55; margin: 0; }
@@ -288,7 +288,7 @@ h1, h2, h3, h4 { color: var(--ink); margin: 0; font-weight: 800; letter-spacing:
 /* ============================================================
    CTA BAND (navy, orange button)
    ============================================================ */
-.cta { background: linear-gradient(120deg, var(--primary) 0%, #2a3294 100%); color: #fff; position: relative; overflow: hidden; }
+.cta { background: linear-gradient(120deg, #1d1e22 0%, #15274a 100%); color: #fff; position: relative; overflow: hidden; }
 .cta::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(80% 120% at 80% 0%, #000, transparent 70%); }
 .cta__inner { position: relative; z-index: 1; text-align: center; padding: 84px 24px; }
 .cta__inner .eyebrow { justify-content: center; }
